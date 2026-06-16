@@ -2,196 +2,318 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Политика в отношении обработки персональных данных</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Шаблоны продающих писем | СДЭК ЮГ</title>
+     
+    <!-- Подключение Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Manrope', sans-serif; }</style>
-</head>
-<body class="bg-[#E1E1E0]/30 text-black antialiased py-10 px-4 md:px-8">
-    <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-[2rem] shadow-xl">
-        <a href="https://yastinavah-sketch.github.io/ooo_sdek_yg/" class="inline-flex items-center text-[#EF780E] hover:underline mb-8 font-bold text-sm">
-            &larr; Вернуться на главную
-        </a>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cdek: {
+                            orange: '#EF780E',
+                            green: '#00A164',
+                            gray: '#E1E1E0',
+                            purple: '#584D98',
+                            dark: '#111111',
+                            black: '#000000',
+                            white: '#FFFFFF'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"TT Runs Trial Variable Roman"', 'Manrope', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: "TT Runs Trial Variable Roman", "Manrope", sans-serif;
+            background-color: #f9f9f9;
+            color: #111111;
+            scroll-behavior: smooth;
+        }
         
-        <h1 class="text-3xl font-bold mb-4">Политика в отношении обработки персональных данных</h1>
-        <p class="text-gray-500 mb-8 font-medium">Дата редакции: 24 апреля 2026 г.</p>
+        .bg-pattern {
+            background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
 
-        <div class="space-y-8 text-gray-700 leading-relaxed">
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .magnetic-btn {
+            display: inline-flex;
+            transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.05);
+        }
+
+        .template-box {
+            position: relative;
+            background: #ffffff;
+            border-left: 4px solid #00A164;
+            border-radius: 0 1.5rem 1.5rem 0;
+            padding: 2rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+    <!-- Навигация -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 py-3 md:py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="flex items-center gap-2">
+                    <div class="h-6 w-px bg-gray-200 mx-1"></div>
+                    <div class="text-cdek-black leading-none">
+                        <p class="font-bold text-[10px] md:text-sm uppercase tracking-tight">ООО СДЭК ЮГ</p>
+                        <p class="text-[8px] md:text-[10px] text-gray-400 font-medium">Закрытые материалы</p>
+                    </div>
+                </div>
+            </div>
+            <a href="http://hr.infocdek.ru/" target="_blank" rel="noopener noreferrer" class="magnetic-btn bg-cdek-orange text-white px-4 py-2 md:px-6 md:py-2.5 rounded-xl font-bold text-xs md:text-sm shadow-lg shadow-cdek-orange/20">
+                Работать с нами
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Секция -->
+    <section class="relative pt-32 pb-8 md:pt-48 md:pb-12 px-4 md:px-8 bg-pattern">
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-cdek-green/10 text-cdek-green font-bold text-xs md:text-sm mb-6 border border-cdek-green/20 scroll-reveal visible">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+                <span>Готовые шаблоны</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-cdek-black tracking-tight text-balance scroll-reveal visible delay-100">
+                Шаблоны писем, которые <span class="text-cdek-green relative inline-block">открывают 80%</span> клиентов
+            </h1>
+            <p class="text-base md:text-xl text-gray-600 font-medium mb-10 leading-relaxed scroll-reveal visible delay-200">
+                Забудьте про «индивидуальный подход» и «мы лидеры рынка». B2B-клиенты покупают конкретику и экспертизу. Мы собрали 3 шаблона писем, которые топ-хантеры СДЭК ЮГ используют для закрытия сделок. Берите и внедряйте.
+            </p>
+        </div>
+    </section>
+
+    <!-- Основной контент -->
+    <section class="pt-4 pb-12 md:pt-8 md:pb-16 px-4 md:px-8">
+        <div class="max-w-4xl mx-auto space-y-12">
             
-            <section>
-                <h2 class="text-xl font-bold text-black mb-3">1. Общие положения</h2>
-                <div class="space-y-2">
-                    <p>1.1. Настоящая Политика обработки персональных данных (далее — «Политика») определяет порядок обработки и защиты персональных данных пользователей сайта (далее — «Сайт»), принадлежащего Обществу с ограниченной ответственностью «СДЭК-ЮГ» (далее — «Оператор»).</p>
-                    <p>1.2. Политика разработана в соответствии с требованиями законодательства Российской Федерации, включая Федеральный закон № 152-ФЗ «О персональных данных».</p>
-                    <p>1.3. Оператор обеспечивает защиту прав и свобод субъектов персональных данных при обработке их персональных данных, включая право на неприкосновенность частной жизни.</p>
+            <!-- Социальное доказательство (Кейс) -->
+            <div class="bg-cdek-green/10 border border-cdek-green/20 rounded-[2rem] p-6 md:p-8 scroll-reveal">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-cdek-green/20 flex items-center justify-center shrink-0 mt-1">
+                        <i data-lucide="trending-up" class="w-6 h-6 text-cdek-green"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-bold text-cdek-black mb-2">Почему эти шаблоны работают?</h3>
+                        <p class="text-gray-700 italic leading-relaxed text-base md:text-lg">
+                            [Вставьте сюда реальный кейс отдела. Например: «С помощью этих писем наша команда за прошлый квартал закрыла 5 крупных контрактов на общую сумму 12 млн рублей. Конверсия из «холодного» письма в созвон выросла на 30%, так как мы отказались от шаблонных фраз в пользу конкретики и цифр».]
+                        </p>
+                    </div>
                 </div>
-            </section>
+            </div>
 
-            <section>
-                <h2 class="text-xl font-bold text-black mb-3">2. Основные понятия</h2>
-                <div class="space-y-2">
-                    <p>2.1. Персональные данные — любая информация, относящаяся к прямо или косвенно определенному физическому лицу.</p>
-                    <p>2.2. Обработка персональных данных — любое действие (операция) или совокупность действий с персональными данными, включая: сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (предоставление, доступ), обезличивание, блокирование, удаление и уничтожение.</p>
+            <!-- Шаблон 1 -->
+            <div class="bg-white rounded-[2.5rem] p-8 md:p-12 card-shadow scroll-reveal">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="px-3 py-1 bg-gray-100 text-gray-600 font-bold text-xs rounded-lg uppercase tracking-wider">Шаблон 1</span>
                 </div>
-            </section>
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">Холодное письмо</h3>
+                <p class="text-gray-600 text-lg mb-6">Цель первого письма — не продать продукт, а «продать» следующий шаг (короткий созвон). Бьем прямо в боль клиента, опираясь на его цифры или специфику.</p>
+                
+                <div class="template-box text-base md:text-lg text-gray-700 space-y-4 group">
+                    <button onclick="copyTemplate(this)" class="absolute top-4 right-4 bg-gray-100 hover:bg-cdek-green hover:text-white text-gray-500 px-3 py-1.5 rounded-lg text-sm font-bold flex items-center gap-2 transition-colors opacity-0 group-hover:opacity-100 focus:opacity-100 shadow-sm">
+                        <i data-lucide="copy" class="w-4 h-4"></i>
+                        <span>Копировать</span>
+                    </button>
+                    <div class="template-content space-y-4">
+                        <p><strong>Тема:</strong> Идея по оптимизации [Направление/Логистики] для [Название компании клиента]</p>
+                        <p>Иван Иванович, добрый день!</p>
+                        <p>Слежу за развитием вашей компании — заметил, что вы активно расширяетесь в [Регион/Направление]. Учитывая ваши объемы, скорее всего, вопрос оптимизации костов на [назовите вашу услугу, например, доставку] сейчас стоит довольно остро.</p>
+                        <p>Мы в [Ваша компания] уже помогли похожим компаниям из вашей ниши (например, [Название конкурента или партнера]) снизить издержки на [X]% за счет [1-2 конкретных инструмента].</p>
+                        <p>Я подготовил предварительный расчет того, как это может сработать у вас. Удобно будет обсудить это завтра в 11:00 на коротком 10-минутном созвоне?</p>
+                        <p>С уважением, <br>[Ваше Имя]</p>
+                    </div>
+                </div>
+            </div>
 
-            <section>
-                <h2 class="text-xl font-bold text-black mb-3">3. Правовые основания обработки</h2>
-                <div class="space-y-2">
-                    <p>3.1. Обработка персональных данных осуществляется на основании:</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>Конституции РФ;</li>
-                        <li>Гражданского кодекса РФ;</li>
-                        <li>Трудового кодекса РФ;</li>
-                        <li>Федерального закона № 152-ФЗ;</li>
-                        <li>согласия субъекта персональных данных.</li>
-                    </ul>
+            <!-- Шаблон 2 -->
+            <div class="bg-white rounded-[2.5rem] p-8 md:p-12 card-shadow scroll-reveal">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="px-3 py-1 bg-gray-100 text-gray-600 font-bold text-xs rounded-lg uppercase tracking-wider">Шаблон 2</span>
                 </div>
-            </section>
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">Фоллоу-ап после отправки КП</h3>
+                <p class="text-gray-600 text-lg mb-6">Никогда не пишите: «Удалось ли ознакомиться?». Это раздражает. Задавайте конкретный вопрос или переводите на следующий этап.</p>
+                
+                <div class="template-box border-cdek-orange text-base md:text-lg text-gray-700 space-y-4 group">
+                    <button onclick="copyTemplate(this)" class="absolute top-4 right-4 bg-gray-100 hover:bg-cdek-orange hover:text-white text-gray-500 px-3 py-1.5 rounded-lg text-sm font-bold flex items-center gap-2 transition-colors opacity-0 group-hover:opacity-100 focus:opacity-100 shadow-sm">
+                        <i data-lucide="copy" class="w-4 h-4"></i>
+                        <span>Копировать</span>
+                    </button>
+                    <div class="template-content space-y-4">
+                        <p><strong>Тема:</strong> Re: КП для [Название компании] | Расчет окупаемости</p>
+                        <p>Иван Иванович, добрый день.</p>
+                        <p>Вчера направлял вам коммерческое предложение. Чтобы сэкономить ваше время на изучение всех деталей, предлагаю сфокусироваться на главном.</p>
+                        <p>На странице 3 я добавил таблицу с расчетом финансовой выгоды для вашего отдела. Обратите внимание на показатель [назовите метрику].</p>
+                        <p>Подскажите, на какой странице или по какому из пунктов у вас возникли вопросы? Готов дать быстрые комментарии.</p>
+                        <p>С уважением, <br>[Ваше Имя]</p>
+                    </div>
+                </div>
+            </div>
 
-            <section>
-                <h2 class="text-xl font-bold text-black mb-3">4. Цели обработки персональных данных</h2>
-                <div class="space-y-2">
-                    <p>4.1. Оператор обрабатывает персональные данные в целях:</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>рассмотрения кандидатуры на вакантные должности;</li>
-                        <li>организации собеседований;</li>
-                        <li>оценки квалификации соискателя;</li>
-                        <li>формирования кадрового резерва.</li>
-                    </ul>
+            <!-- Шаблон 3 -->
+            <div class="bg-white rounded-[2.5rem] p-8 md:p-12 card-shadow scroll-reveal">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="px-3 py-1 bg-gray-100 text-gray-600 font-bold text-xs rounded-lg uppercase tracking-wider">Шаблон 3</span>
                 </div>
-            </section>
-
-            <section>
-                <h2 class="text-xl font-bold text-black mb-3">5. Состав обрабатываемых персональных данных</h2>
-                <div class="space-y-2">
-                    <p>5.1. Оператор может обрабатывать следующие персональные данные:</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>фамилия, имя, отчество;</li>
-                        <li>номер телефона;</li>
-                        <li>адрес электронной почты;</li>
-                        <li>сведения об образовании, опыте работы, навыках;</li>
-                        <li>иные данные, содержащиеся в резюме или сообщении.</li>
-                    </ul>
-                    <p class="mt-4">5.2. Также могут автоматически обрабатываться технические данные:</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>IP-адрес;</li>
-                        <li>данные файлов cookie;</li>
-                        <li>информация о браузере и устройстве;</li>
-                        <li>данные о действиях пользователя на Сайте.</li>
-                    </ul>
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">Письмо-возврат (Если клиент пропал)</h3>
+                <p class="text-gray-600 text-lg mb-6">Клиент прочитал КП и замолчал? Используем технику «Снятие важности». Даем клиенту право сказать «нет», что часто провоцирует его выйти на связь.</p>
+                
+                <div class="template-box border-cdek-purple text-base md:text-lg text-gray-700 space-y-4 group">
+                    <button onclick="copyTemplate(this)" class="absolute top-4 right-4 bg-gray-100 hover:bg-cdek-purple hover:text-white text-gray-500 px-3 py-1.5 rounded-lg text-sm font-bold flex items-center gap-2 transition-colors opacity-0 group-hover:opacity-100 focus:opacity-100 shadow-sm">
+                        <i data-lucide="copy" class="w-4 h-4"></i>
+                        <span>Копировать</span>
+                    </button>
+                    <div class="template-content space-y-4">
+                        <p><strong>Тема:</strong> Закрываю задачу по нашему проекту?</p>
+                        <p>Иван Иванович, приветствую.</p>
+                        <p>Не получил от вас обратной связи по отправленному предложению. Как правило, в B2B тишина означает одно из двух: либо приоритеты вашей компании сместились, и этот вопрос сейчас не актуален, либо вы просто сильно загружены.</p>
+                        <p>Если проект сейчас на паузе — просто ответьте «не актуально», и я не буду вас отвлекать. Если же вопрос в силе, подскажите, когда к нему лучше вернуться?</p>
+                        <p>С уважением, <br>[Ваше Имя]</p>
+                    </div>
                 </div>
-            </section>
-
-            <section>
-                <h2 class="text-xl font-bold text-black mb-3">6. Порядок и условия обработки персональных данных</h2>
-                <div class="space-y-2">
-                    <p>6.1. Обработка персональных данных осуществляется с согласия субъекта, выраженного путем заполнения формы на Сайте и нажатия кнопки отправки.</p>
-                    <p>6.2. Обработка осуществляется как с использованием средств автоматизации, так и без их использования.</p>
-                    <p>6.3. Персональные данные не распространяются и не предоставляются третьим лицам без согласия субъекта, за исключением случаев, предусмотренных законодательством РФ.</p>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-xl font-bold text-black mb-3">7. Передача персональных данных третьим лицам</h2>
-                <div class="space-y-2">
-                    <p>7.1. Оператор вправе передавать персональные данные:</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>аффилированным лицам и компаниям группы СДЭК;</li>
-                        <li>подрядчикам, обеспечивающим работу Сайта и IT-инфраструктуры (хостинг, CRM-системы, почтовые сервисы);</li>
-                        <li>в иных случаях, предусмотренных законодательством РФ.</li>
-                    </ul>
-                    <p class="mt-2">7.2. Все третьи лица обязаны соблюдать конфиденциальность и обеспечивать защиту персональных данных.</p>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-xl font-bold text-black mb-3">8. Трансграничная передача персональных данных</h2>
-                <div class="space-y-2">
-                    <p>8.1. Трансграничная передача персональных данных может осуществляться в случае использования сервисов, расположенных за пределами Российской Федерации.</p>
-                    <p>8.2. При такой передаче Оператор обеспечивает соблюдение требований законодательства РФ и принимает меры по защите персональных данных.</p>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-xl font-bold text-black mb-3">9. Сроки обработки и хранения персональных данных</h2>
-                <div class="space-y-2">
-                    <p>9.1. Персональные данные обрабатываются:</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>до достижения целей обработки;</li>
-                        <li>либо до отзыва согласия субъектом.</li>
-                    </ul>
-                    <p class="mt-2">9.2. В целях формирования кадрового резерва данные могут храниться до 12 месяцев.</p>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-xl font-bold text-black mb-3">10. Права субъекта персональных данных</h2>
-                <div class="space-y-2">
-                    <p>10.1. Субъект персональных данных имеет право:</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>получать информацию об обработке своих данных;</li>
-                        <li>требовать уточнения, блокирования или уничтожения данных;</li>
-                        <li>отозвать согласие на обработку;</li>
-                        <li>обжаловать действия Оператора.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-xl font-bold text-black mb-3">11. Порядок отзыва согласия</h2>
-                <div class="space-y-2">
-                    <p>11.1. Субъект персональных данных вправе отозвать согласие путем направления запроса на электронную почту: <a href="mailto:iakimova.o@cdek.ru" class="text-blue-600 hover:underline">iakimova.o@cdek.ru</a>.</p>
-                    <p>11.2. Оператор прекращает обработку и уничтожает данные в срок, не превышающий 30 календарных дней, если иное не предусмотрено законодательством.</p>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-xl font-bold text-black mb-3">12. Меры по защите персональных данных</h2>
-                <div class="space-y-2">
-                    <p>12.1. Оператор принимает необходимые правовые, организационные и технические меры для защиты персональных данных, включая:</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>ограничение доступа к данным;</li>
-                        <li>использование антивирусных средств и средств защиты информации;</li>
-                        <li>применение политики доступа сотрудников;</li>
-                        <li>предотвращение несанкционированного доступа.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-xl font-bold text-black mb-3">13. Использование файлов cookie</h2>
-                <div class="space-y-2">
-                    <p>13.1. Сайт использует файлы cookie для:</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>корректной работы Сайта;</li>
-                        <li>анализа пользовательской активности;</li>
-                        <li>улучшения пользовательского опыта.</li>
-                    </ul>
-                    <p class="mt-2">13.2. Пользователь может отключить cookie в настройках браузера.</p>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-xl font-bold text-black mb-3">14. Заключительные положения</h2>
-                <div class="space-y-2">
-                    <p>14.1. Оператор вправе вносить изменения в настоящую Политику.</p>
-                    <p>14.2. Актуальная версия Политики размещается на Сайте и вступает в силу с момента публикации.</p>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-xl font-bold text-black mb-3">15. Контактная информация Оператора</h2>
-                <div class="space-y-2 bg-gray-50 p-4 rounded-xl border border-gray-100">
-                    <p class="font-bold text-black">ООО «СДЭК-ЮГ»</p>
-                    <p>ИНН: <strong>2312308891</strong> / ОГРН: <strong>1222300016465</strong></p>
-                    <p>Адрес: <strong>350075, Краснодарский край, г. Краснодар, ул. им. Стасова, д. 184, офис 2</strong></p>
-                    <p>Email: <strong><a href="mailto:iakimova.o@cdek.ru" class="text-blue-600 hover:underline">iakimova.o@cdek.ru</a></strong></p>
-                </div>
-            </section>
+            </div>
 
         </div>
-    </div>
+    </section>
+
+    <!-- О Компании / Upsell секция -->
+    <section id="company" class="py-16 md:py-24 bg-white px-4 md:px-8 text-center scroll-reveal border-t-2 border-gray-100 mt-8">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-cdek-black mb-8">
+                Продавать с таким подходом — <br> <span class="text-cdek-orange">одно удовольствие</span>
+            </h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+                Выше — лишь малая часть того, как мы ведем переговоры. В <strong>ООО СДЭК ЮГ</strong> мы работаем с сильными специалистами. Если ты новичок — мы поможем адаптироваться с помощью системного обучения и наставника. А если ты опытный Хантер — мы дадим масштаб: работу с международными контрактами, отсутствие потолка в доходе, разные сегменты клиентов и возможность вырасти внутри компании.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-12 text-left">
+                <div class="bg-gray-50 p-8 rounded-[2rem] border border-gray-100 hover:border-cdek-green transition-colors">
+                    <i data-lucide="banknote" class="w-10 h-10 text-cdek-green mb-4"></i>
+                    <h4 class="font-bold text-xl mb-2">Без потолка</h4>
+                    <p class="text-gray-500 text-sm">Честные 10% со сделок, международные контракты и разные сегменты клиентов.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-[2rem] border border-gray-100 hover:border-cdek-purple transition-colors">
+                    <i data-lucide="users" class="w-10 h-10 text-cdek-purple mb-4"></i>
+                    <h4 class="font-bold text-xl mb-2">Адаптация</h4>
+                    <p class="text-gray-500 text-sm">Системное обучение и сильный наставник, который доведет до результата.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-[2rem] border border-gray-100 hover:border-cdek-orange transition-colors">
+                    <i data-lucide="building-2" class="w-10 h-10 text-cdek-orange mb-4"></i>
+                    <h4 class="font-bold text-xl mb-2">Масштаб и Рост</h4>
+                    <p class="text-gray-500 text-sm">Мы №1 в ЮФО. Постоянно растем и предлагаем прозрачный внутренний карьерный рост.</p>
+                </div>
+            </div>
+
+            <!-- Триггер срочности -->
+            <div class="mb-8 inline-block bg-red-50 text-red-600 px-6 py-3 rounded-xl border border-red-100 font-medium text-sm md:text-base text-left md:text-center shadow-sm">
+                <i data-lucide="flame" class="w-5 h-5 inline-block mr-2 -mt-1"></i>
+                Сейчас мы открыли <strong>всего 3 вакантных места</strong> для B2B-менеджеров в текущем квартале.
+            </div>
+            <br>
+
+            <a href="http://hr.infocdek.ru/" target="_blank" rel="noopener noreferrer" class="magnetic-btn inline-flex items-center gap-3 bg-cdek-black text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-xl hover:bg-cdek-green transition-colors">
+                Смотреть актуальные вакансии
+                <i data-lucide="arrow-right" class="w-6 h-6"></i>
+            </a>
+            <p class="mt-4 text-sm text-gray-400 font-medium">Краснодар • Воронеж</p>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-cdek-black py-12 px-4 md:px-8 text-white mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+            <div>
+                <p class="text-gray-400 text-sm font-bold mb-1">ООО «СДЭК-ЮГ» под упр. Елены Чернявской</p>
+                <p class="text-gray-500 text-xs">&copy; 2026 Все права защищены.</p>
+            </div>
+            <div class="flex gap-6 justify-center">
+                <a href="http://hr.infocdek.ru/privacy_politic.html" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors text-sm">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+
+            // Анимация появления при скролле
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+        });
+
+        // Функция копирования текста
+        window.copyTemplate = function(btn) {
+            const contentDiv = btn.nextElementSibling;
+            const textToCopy = contentDiv.innerText;
+            
+            // Создаем временный элемент для копирования
+            const textArea = document.createElement("textarea");
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+            textArea.select();
+            
+            try {
+                document.execCommand('copy');
+                
+                // Меняем иконку и текст на "Скопировано"
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = `<i data-lucide="check" class="w-4 h-4"></i><span>Скопировано</span>`;
+                btn.classList.add('text-cdek-green');
+                btn.classList.add('opacity-100'); // фиксируем видимость на время
+                lucide.createIcons();
+                
+                // Возвращаем обратно через 2 секунды
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.classList.remove('text-cdek-green');
+                    btn.classList.remove('opacity-100');
+                    lucide.createIcons();
+                }, 2000);
+            } catch (err) {
+                console.error('Не удалось скопировать текст', err);
+            }
+            
+            document.body.removeChild(textArea);
+        };
+    </script>
 </body>
 </html>
